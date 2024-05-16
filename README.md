@@ -1,36 +1,28 @@
 # Node.js PostgreSQL CRUD example with Express Rest APIs
 
 Full Article with implementation:
+
 > [Node.js PostgreSQL CRUD example with Express Rest APIs](https://www.bezkoder.com/node-express-sequelize-postgresql/)
 
 We will build Rest Apis that can create, retrieve, update, delete and find Tutorials by title.
 
 The following table shows overview of the Rest APIs that will be exported:
 
-- GET     `api/tutorials`	            get all Tutorials
-- GET     `api/tutorials/:id`         get Tutorial by id
-- POST    `api/tutorials`             add new Tutorial
-- PUT     `api/tutorials/:id`         update Tutorial by id
-- DELETE  `api/tutorials/:id`         remove Tutorial by id
-- DELETE  `api/tutorials`             remove all Tutorials
-- GET     `api/tutorials/published`   find all published Tutorials
-- GET     `api/tutorials?title=[kw]`  find all Tutorials which title contains 'kw'
+- GET `api/tutorials` get all Tutorials
+- GET `api/tutorials/:id` get Tutorial by id
+- POST `api/tutorials` add new Tutorial
+- PUT `api/tutorials/:id` update Tutorial by id
+- DELETE `api/tutorials/:id` remove Tutorial by id
+- DELETE `api/tutorials` remove all Tutorials
+- GET `api/tutorials/published` find all published Tutorials
+- GET `api/tutorials?title=[kw]` find all Tutorials which title contains 'kw'
 
 Front-end that works well with this Back-end
+
 > [Axios Client](https://www.bezkoder.com/axios-request/)
 
-> [Angular 8](https://www.bezkoder.com/angular-crud-app/) / [Angular 10](https://www.bezkoder.com/angular-10-crud-app/) / [Angular 11](https://www.bezkoder.com/angular-11-crud-app/) / [Angular 12](https://www.bezkoder.com/angular-12-crud-app/) / [Angular 13](https://www.bezkoder.com/angular-13-crud-example/) / [Angular 14](https://www.bezkoder.com/angular-14-crud-example/) / [Angular 15](https://www.bezkoder.com/angular-15-crud-example/) / [Angular 16](https://www.bezkoder.com/angular-16-crud-example/)
-
-> [Vue 2 Client](https://www.bezkoder.com/vue-js-crud-app/) / [Vue 3 Client](https://www.bezkoder.com/vue-3-crud/) / [Vuetify Client](https://www.bezkoder.com/vuetify-data-table-example/)
-
-> [React Client](https://www.bezkoder.com/react-crud-web-api/) / [React Redux Client](https://www.bezkoder.com/react-redux-crud-example/)
-
-## Demo Video
-This is our Node.js PostgreSQL CRUD example using Express & Sequelize application demo, test Rest Apis with Postman.
-
-[![Node.js PostgreSQL CRUD example Github](http://img.youtube.com/vi/x1pZHN_sjGk/0.jpg)](http://www.youtube.com/watch?v=x1pZHN_sjGk "Node.js PostgreSQL CRUD example Github")
-
 ### Test the APIs
+
 Run our Node.js application with command: `node server.js`.
 
 Using Postman, we're gonna test all the Apis above.
@@ -40,6 +32,7 @@ Using Postman, we're gonna test all the Apis above.
 ![node-js-postgresql-crud-example-create](https://dev-to-uploads.s3.amazonaws.com/i/hqvz8ra9p21z927iwzph.png)
 
 After creating some new Tutorials, you can check PostgreSQL table:
+
 ```testdb=# select * from tutorials;
  id |    title    |    description    | published |         createdAt          |         updatedAt
 ----+-------------+-------------------+-----------+----------------------------+----------------------------
@@ -63,6 +56,7 @@ After creating some new Tutorials, you can check PostgreSQL table:
 ![node-js-postgresql-crud-example-update](https://dev-to-uploads.s3.amazonaws.com/i/3buqfz0by0lu2z4kf3uq.png)
 
 Check `tutorials` table after some rows were updated:
+
 ```testdb=# select * from tutorials;
  id |     title      |    description    | published |         createdAt          |         updatedAt
 ----+----------------+-------------------+-----------+----------------------------+----------------------------
@@ -86,6 +80,7 @@ Check `tutorials` table after some rows were updated:
 ![node-js-postgresql-crud-example-delete-one](https://dev-to-uploads.s3.amazonaws.com/i/pyos3wq4tchb8ixuyj1c.png)
 
 Tutorial with id=4 was removed from `tutorials` table:
+
 ```testdb=# select * from tutorials;
  id |     title      |    description    | published |         createdAt          |         updatedAt
 ----+----------------+-------------------+-----------+----------------------------+----------------------------
@@ -100,25 +95,30 @@ Tutorial with id=4 was removed from `tutorials` table:
 ![node-js-postgresql-crud-example-delete-all](https://dev-to-uploads.s3.amazonaws.com/i/ga42747jorssl20ywyug.png)
 
 Now there are no rows in `tutorials` table:
+
 ```testdb=# select * from tutorials;
  id | title | description | published | createdAt | updatedAt
 ----+-------+-------------+-----------+-----------+-----------
 ```
 
 For more detail, please visit:
+
 > [Node.js PostgreSQL CRUD example with Express Rest APIs](https://www.bezkoder.com/node-express-sequelize-postgresql/)
 
 > [Node.js Express Pagination with PostgreSQL example](https://www.bezkoder.com/node-js-pagination-postgresql/)
 
 Security:
+
 > [Node.js JWT Authentication & Authorization with PostgreSQL example](https://www.bezkoder.com/node-js-jwt-authentication-postgresql/)
 
 Associations:
+
 > [Sequelize Associations: One-to-Many Relationship example](https://www.bezkoder.com/sequelize-associate-one-to-many/)
 
 > [Sequelize Associations: Many-to-Many Relationship example](https://www.bezkoder.com/sequelize-associate-many-to-many/)
 
 Fullstack:
+
 > [Vue + Node.js + Express + PostgreSQL example](https://www.bezkoder.com/vue-node-express-postgresql/)
 
 > [React + Node.js + Express + PostgreSQL example](https://www.bezkoder.com/react-node-express-postgresql/)
@@ -140,6 +140,7 @@ Fullstack:
 > [Angular 16 + Node.js + Express + PostgreSQL example](https://www.bezkoder.com/angular-16-node-js-express-postgresql/)
 
 Integration (run back-end & front-end on same server/port):
+
 > [Integrate React with Node.js Restful Services](https://www.bezkoder.com/integrate-react-express-same-server-port/)
 
 > [Integrate Angular with Node.js Restful Services](https://www.bezkoder.com/integrate-angular-12-node-js/)
@@ -147,11 +148,13 @@ Integration (run back-end & front-end on same server/port):
 > [Integrate Vue with Node.js Restful Services](https://www.bezkoder.com/serve-vue-app-express/)
 
 ## Project setup
+
 ```
 npm install
 ```
 
 ### Run
+
 ```
 node server.js
 ```
